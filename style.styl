@@ -1,0 +1,400 @@
+body {
+	background: rgba(240, 240, 240, 1);
+
+	&>form {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		min-height: 100vh;
+
+	}
+}
+
+body.type-web #Content, #Header, #Footer {
+	padding: 0 40px;
+	margin: 0 auto;
+	max-width: 1600px;
+	position: relative;
+}
+
+	* {
+		box-sizing: border-box;
+		text-transform: none !important;
+	}
+
+	$c-text = rgba(80, 80, 80, 1);
+	$c-blue = rgba(0, 140, 204, 1);
+	$c-border = rgba(220, 220, 220, .5);
+
+.data-table table tbody tr td {
+	padding: 15px 20px;
+	background-color: rgba(250, 250, 250, 1);
+	border-bottom: 1px solid rgba(220, 220, 220, .5);
+}
+
+.data-table table thead tr th {
+	text-shadow: none;
+	color: rgba(80, 80, 80, .5);
+	background-color: transparent;
+	border-bottom: 1px solid $c-border;
+	font-weight: normal;
+	opacity: 1;
+	padding: 12px 20px;
+	text-transform: none;
+}
+
+.data-table table thead {
+	border-bottom: 2px solid rgba(220, 220, 220, .5);
+}
+
+.data-table table tbody tr td {
+	transition: background-color .1s ease-in-out;
+}
+
+.data-table table tbody tr:hover td {
+	background-color: rgba(87, 181, 222, .15);
+}
+
+.data-table {
+
+}
+
+.data-table table {
+	box-shadow: 0 8px 20px -8px darken(rgba(87, 181, 222, .25), 50);
+	border-radius: 4px;
+	overflow: hidden;
+
+}
+
+.data-table>div:first-child {
+	padding: 10px 0 20px;
+	height: auto;
+}
+
+.data-table h2 {
+	display: block;
+	padding-top: 0;
+	padding-left: 0;
+	background-color: transparent;
+	color: $c-text;
+	text-shadow: none;
+	opacity: .75;
+	margin-bottom: 20px;
+	font-size: 24px;
+	margin: 0;
+	height: auto;
+}
+
+.data-table .filter {
+	background-color: $c-blue;
+	background-color: rgba(0, 0, 0, .05);
+	background-color: transparent;
+
+	//border-bottom: 2px solid $c-blue;
+	border-top: 1px solid $c-border;
+
+	&:first-child {
+		box-shadow: 0 8px 16px -4px darken(rgba(87, 181, 222, .15), 25);
+	}
+
+	box-shadow: 0 8px 16px -4px darken(rgba(87, 181, 222, .15), 25);
+	padding: 20px 20px;
+}
+
+input, select, input[type="text"], input[type="password"], textarea {
+	background-color: white;
+	border: 2px solid $c-border;
+	border-radius: 4px;
+
+	margin-right: 10px;
+	min-height: 30px;
+	//padding: 10px;
+}
+
+	.b-button {
+		min-height: 30px;
+		box-shadow: 0 8px 16px -4px darken(rgba(87, 181, 222, .15), 25);
+		padding-left: 15px;
+		padding-right: 15px;
+		margin-right: 10px;
+		transition: all ease-in-out .25s;
+		text-transform: none;
+	}
+
+.data-table .filter button {
+	@extend .b-button;
+	background-color: $c-blue;
+}
+
+.data-table .footer {
+	@extend .data-table .filter;
+	height: auto;
+
+	box-shadow: none;
+
+	* {
+		//color: $c-text !important;
+	}
+}
+
+.data-table .footer .dataTables_paginate a {
+	padding: 10px 20px;
+	border: 1px solid $c-border;
+	border-radius: 4px;
+	margin-right: 20px;
+	color: $c-text;
+	//margin-right: 20px;
+}
+
+.data-table .footer .dataTables_paginate a.current {
+	color: white;
+	background-color: $c-blue;
+	border: none;
+}
+
+#Header {
+	background: white;
+	box-shadow: 0 8px 16px -8px darken(rgba(87, 181, 222, .15), 50);
+	padding: 10px 40px;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#Header h1 {
+	float: none;
+}
+
+#Header h1 a {
+	color: $c-blue;
+	text-shadow: none;
+
+}
+
+#Header .MainMenu {
+	position: relative;
+	margin-left: 40px;
+	right: auto;
+}
+
+#Header .MainMenu ul.level1 li {
+	border: none;
+	margin-right: 10px;
+}
+
+#Header .MainMenu ul.level1 li a {
+	text-shadow: none;
+	color: $c-text;
+
+}
+
+#Header .MainMenu ul.level1 li:hover {
+	background-color: $c-blue;
+	color: #ffffff;
+	border-radius: 4px 4px 0 0;
+
+	a {
+		color: #ffffff;
+	}
+}
+
+#Header .MainMenu ul.level2 {
+	background-color: $c-blue;
+	right: 0;
+	width: auto;
+
+	border-radius: 4px 0 4px 4px;
+	box-shadow: 0 8px 16px -4px darken(rgba(87, 181, 222, .25), 50);
+
+	li {
+		margin: 0;
+		padding: 10px 15px;
+		transition: all ease-in-out .1s;
+
+		&:hover {
+			background-color: lighten($c-blue, 10);
+			border-radius: 4px;
+		}
+
+		a {
+			border: none;
+			padding: 0 !important;
+		}
+	}
+}
+
+#Header .MainMenu ul.level1 li a i {
+	display: none;
+}
+
+.level1>.haschildren {
+	padding-right: 25px;
+	&:after {
+		content: '';
+		border-left: 2px solid $c-blue;
+		border-bottom: 2px solid $c-blue;
+		width: 7px;
+		height: 7px;
+		display: block;
+		position: absolute;
+		right: 10px;
+		top: 10px;
+
+
+		transform: rotate(-45deg);
+
+		transition: all .25s ease-in-out;
+	}
+
+	&:hover {
+
+		&:after {
+			top: 14px;
+			transform: rotate(135deg);
+			border-left: 2px solid #ffffff;
+			border-bottom: 2px solid #ffffff;
+		}
+	}
+}
+
+body.type-web #Content {
+	//background: transparent;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.data-table .actions {
+	position: relative;
+}
+
+	.data-table>div:first-child {
+		display: flex;
+		justify-content: space-between;
+	}
+
+.data-table .actions a {
+	@extend .data-table .footer .dataTables_paginate a;
+	line-height: inherit;
+
+	background-color: $c-blue;
+	text-transform: capitalize !important;
+
+	transition: 0.15s all ease-in-out;
+
+	color: #ffffff;
+
+	&:hover {
+		background-color: lighten($c-blue, 10);
+	}
+}
+
+	.aspNetHidden {
+		display: none;
+	}
+
+.data-table .footer {
+	border: none;
+}
+
+#Header {
+	border-radius: 0 0 4px 4px;
+}
+
+h1, h2, h3, h4 {
+	font-family: Roboto;
+	font-weight: 300;
+}
+
+#Header h1 a {
+	height: auto;
+}
+
+#Footer, #Footer #FooterText a {
+	color: $c-blue;
+}
+
+#Footer {
+	border: none;
+}
+
+.HorizontalSearchBar {
+	background-color: $c-blue;
+	border-radius: 4px;
+	margin-bottom: 10px;
+	box-shadow: 0 8px 16px -8px darken(rgba(87, 181, 222, .15), 50);
+}
+
+.HorizontalSearchBar .Item label {
+	color: #ffffff;
+}
+
+i {
+	display: none !important;
+}
+
+#Header h1 a {
+	display: none;
+}
+
+#Header h1 {
+	background-image: url(../img/logo.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 40px;
+	width: 200px;
+	display: block;
+}
+
+.data-table table tbody tr td label.is-true {
+	//padding: 8px 10px;
+	background-color: alpha($c-blue, .25);
+	text-shadow: none;
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	color: transparent;
+
+}
+
+.data-table table tbody tr td label.is-false {
+	//padding: 8px 10px;
+
+	background-color: alpha(#ff7517, .25);
+	text-shadow: none;
+	color: transparent;
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+}
+
+.ItemEditSection h2 {
+	background-color: $c-blue;
+	text-shadow: none;
+	padding: 10px 20px;
+
+	border-radius: 4px 4px 0px 0px;
+}
+
+.small-tabs li {
+	background-color: $c-blue;
+	opacity: .5;
+}
+
+.small-tabs li.on {
+	background-color: $c-blue;
+	opacity: 1;
+}
+
+.LeftHalf {
+	padding-right: 15px;
+}
+
+.data-table .footer .dataTables_info {
+	color: $c-text;
+	float: none;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 10px;
+	opacity: .5;
+}

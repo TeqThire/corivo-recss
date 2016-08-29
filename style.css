@@ -1,1 +1,314 @@
-
+body {
+  background: #f0f0f0;
+}
+body>form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+body.type-web #Content,
+#Header,
+#Footer {
+  padding: 0 40px;
+  margin: 0 auto;
+  max-width: 1600px;
+  position: relative;
+}
+* {
+  box-sizing: border-box;
+  text-transform: none !important;
+}
+.data-table table tbody tr td {
+  padding: 15px 20px;
+  background-color: #fafafa;
+  border-bottom: 1px solid rgba(220,220,220,0.5);
+}
+.data-table table thead tr th {
+  text-shadow: none;
+  color: rgba(80,80,80,0.5);
+  background-color: transparent;
+  border-bottom: 1px solid rgba(220,220,220,0.5);
+  font-weight: normal;
+  opacity: 1;
+  padding: 12px 20px;
+  text-transform: none;
+}
+.data-table table thead {
+  border-bottom: 2px solid rgba(220,220,220,0.5);
+}
+.data-table table tbody tr td {
+  transition: background-color 0.1s ease-in-out;
+}
+.data-table table tbody tr:hover td {
+  background-color: rgba(87,181,222,0.15);
+}
+.data-table table {
+  box-shadow: 0 8px 20px -8px rgba(9,34,45,0.25);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.data-table>div:first-child {
+  padding: 10px 0 20px;
+  height: auto;
+}
+.data-table h2 {
+  display: block;
+  padding-top: 0;
+  padding-left: 0;
+  background-color: transparent;
+  color: #505050;
+  text-shadow: none;
+  opacity: 0.75;
+  margin-bottom: 20px;
+  font-size: 24px;
+  margin: 0;
+  height: auto;
+}
+.data-table .filter,
+.data-table .footer {
+  background-color: #008ccc;
+  background-color: rgba(0,0,0,0.05);
+  background-color: transparent;
+  border-top: 1px solid rgba(220,220,220,0.5);
+  box-shadow: 0 8px 16px -4px rgba(30,115,152,0.15);
+  padding: 20px 20px;
+}
+.data-table .filter:first-child,
+.data-table .footer:first-child {
+  box-shadow: 0 8px 16px -4px rgba(30,115,152,0.15);
+}
+input,
+select,
+input[type="text"],
+input[type="password"],
+textarea {
+  background-color: #fff;
+  border: 2px solid rgba(220,220,220,0.5);
+  border-radius: 4px;
+  margin-right: 10px;
+  min-height: 30px;
+}
+.b-button,
+.data-table .filter button {
+  min-height: 30px;
+  box-shadow: 0 8px 16px -4px rgba(30,115,152,0.15);
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 10px;
+  transition: all ease-in-out 0.25s;
+  text-transform: none;
+}
+.data-table .filter button {
+  background-color: #008ccc;
+}
+.data-table .footer {
+  height: auto;
+  box-shadow: none;
+}
+.data-table .footer .dataTables_paginate a,
+.data-table .actions a {
+  padding: 10px 20px;
+  border: 1px solid rgba(220,220,220,0.5);
+  border-radius: 4px;
+  margin-right: 20px;
+  color: #505050;
+}
+.data-table .footer .dataTables_paginate a.current {
+  color: #fff;
+  background-color: #008ccc;
+  border: none;
+}
+#Header {
+  background: #fff;
+  box-shadow: 0 8px 16px -8px rgba(9,34,45,0.15);
+  padding: 10px 40px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#Header h1 {
+  float: none;
+}
+#Header h1 a {
+  color: #008ccc;
+  text-shadow: none;
+}
+#Header .MainMenu {
+  position: relative;
+  margin-left: 40px;
+  right: auto;
+}
+#Header .MainMenu ul.level1 li {
+  border: none;
+  margin-right: 10px;
+}
+#Header .MainMenu ul.level1 li a {
+  text-shadow: none;
+  color: #505050;
+}
+#Header .MainMenu ul.level1 li:hover {
+  background-color: #008ccc;
+  color: #fff;
+  border-radius: 4px 4px 0 0;
+}
+#Header .MainMenu ul.level1 li:hover a {
+  color: #fff;
+}
+#Header .MainMenu ul.level2 {
+  background-color: #008ccc;
+  right: 0;
+  width: auto;
+  border-radius: 4px 0 4px 4px;
+  box-shadow: 0 8px 16px -4px rgba(9,34,45,0.25);
+}
+#Header .MainMenu ul.level2 li {
+  margin: 0;
+  padding: 10px 15px;
+  transition: all ease-in-out 0.1s;
+}
+#Header .MainMenu ul.level2 li:hover {
+  background-color: #00afff;
+  border-radius: 4px;
+}
+#Header .MainMenu ul.level2 li a {
+  border: none;
+  padding: 0 !important;
+}
+#Header .MainMenu ul.level1 li a i {
+  display: none;
+}
+.level1>.haschildren {
+  padding-right: 25px;
+}
+.level1>.haschildren:after {
+  content: '';
+  border-left: 2px solid #008ccc;
+  border-bottom: 2px solid #008ccc;
+  width: 7px;
+  height: 7px;
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  transform: rotate(-45deg);
+  transition: all 0.25s ease-in-out;
+}
+.level1>.haschildren:hover:after {
+  top: 14px;
+  transform: rotate(135deg);
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+body.type-web #Content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.data-table .actions {
+  position: relative;
+}
+.data-table>div:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+.data-table .actions a {
+  line-height: inherit;
+  background-color: #008ccc;
+  text-transform: capitalize !important;
+  transition: 0.15s all ease-in-out;
+  color: #fff;
+}
+.data-table .actions a:hover {
+  background-color: #00afff;
+}
+.aspNetHidden {
+  display: none;
+}
+.data-table .footer {
+  border: none;
+}
+#Header {
+  border-radius: 0 0 4px 4px;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: Roboto;
+  font-weight: 300;
+}
+#Header h1 a {
+  height: auto;
+}
+#Footer,
+#Footer #FooterText a {
+  color: #008ccc;
+}
+#Footer {
+  border: none;
+}
+.HorizontalSearchBar {
+  background-color: #008ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  box-shadow: 0 8px 16px -8px rgba(9,34,45,0.15);
+}
+.HorizontalSearchBar .Item label {
+  color: #fff;
+}
+i {
+  display: none !important;
+}
+#Header h1 a {
+  display: none;
+}
+#Header h1 {
+  background-image: url("../img/logo.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 200px;
+  display: block;
+}
+.data-table table tbody tr td label.is-true {
+  background-color: rgba(0,140,204,0.25);
+  text-shadow: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  color: transparent;
+}
+.data-table table tbody tr td label.is-false {
+  background-color: rgba(255,117,23,0.25);
+  text-shadow: none;
+  color: transparent;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+.ItemEditSection h2 {
+  background-color: #008ccc;
+  text-shadow: none;
+  padding: 10px 20px;
+  border-radius: 4px 4px 0px 0px;
+}
+.small-tabs li {
+  background-color: #008ccc;
+  opacity: 0.5;
+}
+.small-tabs li.on {
+  background-color: #008ccc;
+  opacity: 1;
+}
+.LeftHalf {
+  padding-right: 15px;
+}
+.data-table .footer .dataTables_info {
+  color: #505050;
+  float: none;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+  opacity: 0.5;
+}
